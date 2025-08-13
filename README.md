@@ -54,8 +54,15 @@ An AI-powered data cleaning tool with intelligent imputation and comprehensive q
    ```bash
    pip install fastapi uvicorn pandas scikit-learn python-multipart reportlab
    ```
+3. **Create a New React App**
+```bash
+npx create-react-app frontend
+cd my-app
+```
+4. **Copy Frontend Files**
+After creating the React app, copy all files from the provided frontend files folder into the src folder within your newly created React app directory (`frontend`). This will replace the default files with your custom application files. 
 
-3. **Install Node.js dependencies**
+5. **Install Node.js dependencies in the frontend folder**
    ```bash
    npm install react react-dom react-router-dom
    ```
