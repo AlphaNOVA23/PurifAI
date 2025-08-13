@@ -59,8 +59,9 @@ An AI-powered data cleaning tool with intelligent imputation and comprehensive q
 npx create-react-app frontend
 cd my-app
 ```
+- this will create a new frontend folder
 4. **Copy Frontend Files**
-After creating the React app, copy all files from the provided frontend files folder into the src folder within your newly created React app directory (`frontend`). This will replace the default files with your custom application files. 
+ - After creating the React app, copy all files from the provided frontend files folder into the src folder within your newly created React app directory (`frontend`). This will replace the default files with your custom application files. 
 
 5. **Install Node.js dependencies in the frontend folder**
    ```bash
