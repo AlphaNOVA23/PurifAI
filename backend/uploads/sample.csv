@@ -1,11 +1,10 @@
-
 employee_id,name,age,salary,years_experience,department,performance_score,bonus,education_level,city
 1,Alice Johnson,28,75000,5,Engineering,8.5,5000,Masters,San Francisco
 2,Bob Smith,,82000,7,Marketing,7.2,,Bachelors,New York
 3,Carol Davis,35,68000,,Sales,9.1,4500,Bachelors,Chicago
 4,David Wilson,42,95000,12,Engineering,,7500,PhD,Seattle
 5,Emma Brown,29,,4,Marketing,6.8,3200,Masters,
-6,,31,71000,6,Sales,8.0,4100,Bachelors,Boston
+6,,31,71000,6,Sales,8,4100,Bachelors,Boston
 7,Frank Miller,38,89000,10,,7.5,6200,Masters,Portland
 8,Grace Lee,26,62000,3,Engineering,8.8,,PhD,Austin
 9,Henry Garcia,,77000,8,Marketing,7.9,4800,Bachelors,Denver
@@ -16,7 +15,7 @@ employee_id,name,age,salary,years_experience,department,performance_score,bonus,
 14,Mike Johnson,39,91000,11,Sales,8.7,6100,Masters,Dallas
 15,Nancy White,32,,6,Engineering,7.6,4300,,San Diego
 16,Oscar Martinez,28,66000,4,Marketing,8.1,3600,Bachelors,
-17,Paula Rodriguez,,79000,9,Sales,9.0,5200,Masters,Las Vegas
+17,Paula Rodriguez,,79000,9,Sales,9,5200,Masters,Las Vegas
 18,Quinn Taylor,36,87000,,Engineering,7.8,5900,PhD,Nashville
 19,Rachel Green,31,69000,5,,8.4,4000,Bachelors,Orlando
 20,Sam Wilson,,74000,7,Marketing,,4700,Masters,Atlanta
