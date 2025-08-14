@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./enhanced-styles.css"; // New CSS file with enhanced styles
+import "./enhanced-styles.css";
 
 export default function UploadPage() {
   const [file, setFile] = useState(null);
@@ -9,6 +9,7 @@ export default function UploadPage() {
   const [imputationMethod, setImputationMethod] = useState('knn');
   const [progress, setProgress] = useState(0);
   const navigate = useNavigate();
+  const fileInputRef = useRef(null);
 
   const handleDrag = (e) => {
     e.preventDefault();
@@ -35,6 +36,19 @@ export default function UploadPage() {
     }
   };
 
+  const handleDropZoneClick = (e) => {
+    // Don't trigger file input if clicking on the upload button
+    if (e.target.classList.contains('upload-btn') || 
+        e.target.closest('.upload-btn')) {
+      return;
+    }
+    
+    // Only trigger file input if we're not busy
+    if (!busy) {
+      fileInputRef.current?.click();
+    }
+  };
+
   const simulateProgress = () => {
     const interval = setInterval(() => {
       setProgress(prev => {
@@ -48,7 +62,10 @@ export default function UploadPage() {
     return interval;
   };
 
-  const handleUpload = async () => {
+  const handleUpload = async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
     if (!file) {
       alert("Please select a CSV file first.");
       return;
@@ -73,15 +90,19 @@ export default function UploadPage() {
       if (!res.ok) throw new Error(`Server error: ${res.status}`);
 
       const data = await res.json();
-      // Store both data and method used
-      localStorage.setItem("qcData", JSON.stringify({...data, method: imputationMethod}));
       
+      // Store data with method used
+      const dataWithMethod = { ...data, method: imputationMethod };
+      localStorage.setItem("qcData", JSON.stringify(dataWithMethod));
+      
+      // Navigate after a brief delay to show completion
       setTimeout(() => {
-        navigate("/results");
-      }, 500);
+        navigate("/results", { replace: true });
+      }, 800);
+      
     } catch (e) {
-      console.error(e);
-      alert("Error processing file. Check backend logs.");
+      console.error("Upload error:", e);
+      alert("Error processing file. Please check your backend connection and try again.");
       setProgress(0);
     } finally {
       setBusy(false);
@@ -110,6 +131,7 @@ export default function UploadPage() {
                   value="mean"
                   checked={imputationMethod === 'mean'}
                   onChange={(e) => setImputationMethod(e.target.value)}
+                  disabled={busy}
                 />
                 <label htmlFor="method-mean">
                   <strong>Mean</strong><br />
@@ -124,6 +146,7 @@ export default function UploadPage() {
                   value="median"
                   checked={imputationMethod === 'median'}
                   onChange={(e) => setImputationMethod(e.target.value)}
+                  disabled={busy}
                 />
                 <label htmlFor="method-median">
                   <strong>Median</strong><br />
@@ -138,6 +161,7 @@ export default function UploadPage() {
                   value="knn"
                   checked={imputationMethod === 'knn'}
                   onChange={(e) => setImputationMethod(e.target.value)}
+                  disabled={busy}
                 />
                 <label htmlFor="method-knn">
                   <strong>k-NN</strong><br />
@@ -149,35 +173,38 @@ export default function UploadPage() {
 
           <section className="upload-section">
             <div 
-              className={`drop-zone ${dragActive ? 'dragover' : ''}`}
+              className={`drop-zone ${dragActive ? 'dragover' : ''} ${busy ? 'processing' : ''}`}
               onDragEnter={handleDrag}
               onDragLeave={handleDrag}
               onDragOver={handleDrag}
               onDrop={handleDrop}
-              onClick={() => document.getElementById('file-input').click()}
             >
-              <div className="drop-icon">📊</div>
-              <div className="drop-text">
-                {file ? file.name : 'Drag & Drop your dataset here'}
-              </div>
-              <div className="drop-subtext">
-                {file ? 'Click to change file' : 'or click to browse files'}
+              <div className="drop-content" onClick={handleDropZoneClick}>
+                <div className="drop-icon">📊</div>
+                <div className="drop-text">
+                  {file ? file.name : 'Drag & Drop your dataset here'}
+                </div>
+                <div className="drop-subtext">
+                  {file ? 'Click to change file' : 'or click to browse files'}
+                </div>
               </div>
               
               <input 
                 type="file" 
-                id="file-input" 
+                ref={fileInputRef}
                 className="file-input" 
                 accept=".csv,.xlsx,.json"
                 onChange={handleFileChange}
+                disabled={busy}
               />
               
               <button 
                 className="upload-btn"
                 onClick={handleUpload}
                 disabled={busy || !file}
+                type="button"
               >
-                {busy ? "Processing..." : "Upload & Process"}
+                {busy ? `Processing... ${Math.round(progress)}%` : "Upload & Process"}
               </button>
               
               <div className="supported-formats">
@@ -206,8 +233,10 @@ export default function UploadPage() {
 
       <div className="status-bar">
         <div className="status-indicator">
-          <div className="status-dot"></div>
-          <span className="status-message">PURIFAI READY</span>
+          <div className={`status-dot ${busy ? 'processing' : ''}`}></div>
+          <span className="status-message">
+            {busy ? 'PROCESSING' : 'PURIFAI READY'}
+          </span>
         </div>
         
         <div className="connection-status">
