@@ -40,7 +40,7 @@ An AI-powered data cleaning tool with intelligent imputation and comprehensive q
 
 - Node.js (v14 or higher)
 - Python 3.8+
-- npm 
+- npm
 
 ### Installation
 
@@ -57,16 +57,16 @@ An AI-powered data cleaning tool with intelligent imputation and comprehensive q
 3. **Create a New React App**
 ```bash
 npx create-react-app frontend
-cd my-app
+cd frontend
 ```
 - this will create a new frontend folder
-4. **Copy Frontend Files**
- - After creating the React app, copy all files from the provided frontend files folder into the src folder within your newly created React app directory (`frontend`). This will replace the default files with your custom application files. 
-
-5. **Install Node.js dependencies in the frontend folder**
+4. **Install Node.js dependencies in the frontend folder**
    ```bash
    npm install react react-dom react-router-dom
    ```
+
+5.**Copy Frontend Files**
+ - After creating the React app, copy all files from the provided frontend files folder into the src folder within your newly created React app directory (`frontend`). This will replace the default files with your custom application files.
 
 ### Running the Application
 
@@ -101,10 +101,7 @@ cd my-app
 
 ## 📊 Sample Data
 
-The repository includes test datasets with missing values:
-- `sample.csv`: Simple 5-row dataset for quick testing
-- `sample2.csv`: Comprehensive survey data with realistic missing patterns
-- `test_dataset_with_missing_values.csv`: Employee dataset perfect for testing
+The repository includes test datasets with missing values.
 
 ## 🛠️ API Endpoints
 
