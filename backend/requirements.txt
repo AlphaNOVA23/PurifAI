@@ -4,4 +4,6 @@ pip install pandas
 pip install scikit-learn
 pip install python-multipart
 pip install reportlab
-
+pip install matplotlib
+pip install seaborn
+pip install numpy

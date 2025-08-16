@@ -1,0 +1,63 @@
+SurveyID,Household_Size,Annual_Income_INR,State,District,Children_in_Household,Education_Level,Employment_Status,Primary_Occupation,Has_Electricity,Water_Source,Design_Weight
+101,4,250000,Maharashtra,Mumbai,2,High School,Unemployed,Not Applicable,Yes,Tap,1.12
+102,2,1200000,Delhi,New Delhi,0,Masters,Employed,IT Professional,Yes,Tap,0.98
+103,5,400000,Karnataka,Bengaluru,3,High School,Employed,Laborer,Yes,Tap,1.54
+104,1,90000,Bihar,Patna,0,Middle School,Unemployed,Not Applicable,No,Hand Pump,2.15
+105,3,650000,Gujarat,Ahmedabad,1,Bachelors,Employed,Business Owner,Yes,Tap,1.23
+106,6,550000,Uttar Pradesh,Lucknow,4,Middle School,Employed,Farmer,Yes,Well,1.88
+107,2,180000,West Bengal,Kolkata,1,High School,Unemployed,Not Applicable,Yes,Tap,1.43
+108,4,800000,Tamil Nadu,Chennai,2,Bachelors,Employed,Government Job,Yes,Tap,1.05
+109,1,150000,Rajasthan,Jaipur,0,High School,Unemployed,Not Applicable,Yes,Tanker,1.65
+110,3,720000,Kerala,Thiruvananthapuram,2,Masters,Employed,IT Professional,Yes,Tap,0.89
+111,7,600000,Odisha,Bhubaneswar,5,Middle School,Unemployed,Not Applicable,Yes,Well,2.24
+112,2,350000,Haryana,Gurugram,1,Bachelors,Employed,Business Owner,Yes,Tap,1.19
+113,4,450000,Punjab,Amritsar,2,High School,Employed,Farmer,Yes,Tap,1.38
+114,3,15000,Jharkhand,Ranchi,2,Middle School,Unemployed,Not Applicable,No,Hand Pump,2.78
+115,1,10000000,Assam,Guwahati,0,Masters,Employed,Business Owner,Yes,Tap,0.75
+116,5,300000,Chhattisgarh,Raipur,3,High School,Unemployed,Not Applicable,Yes,Hand Pump,1.95
+117,2,220000,Madhya Pradesh,Bhopal,1,Middle School,Unemployed,Not Applicable,Yes,Well,1.81
+118,3,950000,Andhra Pradesh,Visakhapatnam,2,Masters,Employed,IT Professional,Yes,Tap,1.10
+119,4,500000,Telangana,Hyderabad,3,Bachelors,Employed,Government Job,Yes,Tap,1.33
+120,6,750000,Jammu and Kashmir,Srinagar,4,High School,Employed,Business Owner,Yes,Tanker,1.75
+121,1,1000,Delhi,New Delhi,0,Middle School,Unemployed,Not Applicable,No,Tanker,2.99
+122,2,450000,Maharashtra,Pune,1,Bachelors,Employed,IT Professional,Yes,Tap,1.15
+123,5,600000,Karnataka,Mysuru,3,High School,Employed,Farmer,Yes,Tap,1.59
+124,3,320000,Bihar,Gaya,2,Middle School,Unemployed,Not Applicable,Yes,Hand Pump,2.10
+125,4,580000,Gujarat,Surat,2,Bachelors,Employed,Business Owner,Yes,Tap,1.28
+126,10,30000000,Uttar Pradesh,Noida,7,PhD,Employed,Business Owner,Yes,Tap,0.65
+127,4,380000,Maharashtra,Nagpur,2,Bachelors,Employed,Government Job,Yes,Tap,1.25
+128,1,75000,Delhi,New Delhi,0,High School,Unemployed,Not Applicable,Yes,Tap,1.98
+129,6,550000,Karnataka,Hubli,4,Masters,Employed,IT Professional,Yes,Tap,1.62
+130,3,210000,Bihar,Muzaffarpur,1,High School,Employed,Laborer,Yes,Hand Pump,2.35
+131,2,900000,Gujarat,Vadodara,0,PhD,Employed,Government Job,Yes,Tap,0.81
+132,5,420000,Uttar Pradesh,Kanpur,3,Middle School,Unemployed,Not Applicable,No,Well,2.05
+133,1,500,West Bengal,Darjeeling,0,High School,Unemployed,Not Applicable,No,Tanker,3.45
+134,2,1100000,Tamil Nadu,Coimbatore,0,Bachelors,Employed,IT Professional,Yes,Tap,0.95
+135,4,20000000,Rajasthan,Udaipur,2,Masters,Employed,Business Owner,Yes,Tap,0.78
+136,3,320000,Kerala,Kochi,1,Bachelors,Employed,Government Job,Yes,Tap,0.91
+137,15,800000,Odisha,Cuttack,9,Middle School,Employed,Farmer,Yes,Well,2.85
+138,2,250000,Haryana,Faridabad,0,High School,Unemployed,Not Applicable,Yes,Tap,1.48
+139,5,680000,Punjab,Ludhiana,3,Bachelors,Employed,Business Owner,Yes,Tap,1.41
+140,2,2500,Jharkhand,Jamshedpur,1,Middle School,Employed,Laborer,No,Hand Pump,3.15
+141,1,2800000,Assam,Dibrugarh,0,PhD,Employed,IT Professional,Yes,Tap,0.83
+142,4,850000,Chhattisgarh,Bhilai,2,High School,Employed,Farmer,Yes,Hand Pump,1.89
+143,3,150000,Madhya Pradesh,Indore,2,Uneducated,Unemployed,Not Applicable,No,Well,2.55
+144,99,750000,Andhra Pradesh,Vijayawada,5,Bachelors,Employed,Business Owner,Yes,Tap,3.50
+145,2,1900000,Telangana,Warangal,0,Masters,Employed,IT Professional,Yes,Tap,0.99
+146,5,480000,Jammu and Kashmir,Jammu,3,High School,Employed,Farmer,Yes,Tanker,1.82
+147,1,120000,Delhi,New Delhi,0,High School,Unemployed,Not Applicable,Yes,Tap,1.77
+148,4,480000,Maharashtra,Thane,2,Bachelors,Employed,Government Job,Yes,Tap,1.18
+149,3,200000,Karnataka,Mangaluru,1,High School,Unemployed,Not Applicable,Yes,Tap,1.73
+150,20,1500000,Bihar,Bhagalpur,14,Middle School,Employed,Farmer,Yes,Well,3.21
+151,2,1300000,Gujarat,Rajkot,0,PhD,Employed,IT Professional,Yes,Tap,0.85
+152,3,50000000,Uttar Pradesh,Ghaziabad,1,Masters,Employed,Business Owner,Yes,Tap,0.55
+153,4,300000,West Bengal,Howrah,2,High School,Employed,Laborer,Yes,Tap,1.66
+154,1,95000,Tamil Nadu,Madurai,0,Middle School,Unemployed,Not Applicable,No,Well,2.22
+155,2,3,Rajasthan,Jodhpur,0,Bachelors,Employed,Laborer,No,Tanker,3.98
+156,5,550000,Kerala,Kozhikode,4,High School,Employed,Farmer,Yes,Tap,1.08
+157,3,280000,Odisha,Puri,1,Bachelors,Employed,Government Job,Yes,Well,1.99
+158,2,6,Haryana,Panipat,0,Masters,Employed,Laborer,No,Tap,3.87
+159,4,720000,Punjab,Jalandhar,2,Bachelors,Employed,Business Owner,Yes,Tap,1.35
+160,3,180000,Jharkhand,Dhanbad,2,Middle School,Unemployed,Not Applicable,No,Hand Pump,2.65
+161,1,1700000,Assam,Silchar,0,Masters,Employed,IT Professional,Yes,Tap,0.88
+162,2,4,Chhattisgarh,Korba,0,PhD,Employed,Government Job,No,Hand Pump,4.10

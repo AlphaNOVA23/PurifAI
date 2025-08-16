@@ -8,6 +8,7 @@ export default function UploadPage() {
   const [dragActive, setDragActive] = useState(false);
   const [imputationMethod, setImputationMethod] = useState('knn');
   const [progress, setProgress] = useState(0);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
   const fileInputRef = useRef(null);
 
@@ -25,25 +26,49 @@ export default function UploadPage() {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
+    setError(null);
+    
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      setFile(e.dataTransfer.files[0]);
+      const droppedFile = e.dataTransfer.files[0];
+      if (validateFile(droppedFile)) {
+        setFile(droppedFile);
+      }
     }
+  };
+
+  const validateFile = (file) => {
+    const allowedTypes = ['text/csv', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/json'];
+    const maxSize = 50 * 1024 * 1024; // 50MB
+    
+    if (!allowedTypes.some(type => file.type === type) && !file.name.toLowerCase().endsWith('.csv')) {
+      setError("Please upload a CSV, Excel, or JSON file");
+      return false;
+    }
+    
+    if (file.size > maxSize) {
+      setError("File size must be less than 50MB");
+      return false;
+    }
+    
+    setError(null);
+    return true;
   };
 
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
-      setFile(e.target.files[0]);
+      const selectedFile = e.target.files[0];
+      if (validateFile(selectedFile)) {
+        setFile(selectedFile);
+      }
     }
   };
 
   const handleDropZoneClick = (e) => {
-    // Don't trigger file input if clicking on the upload button
     if (e.target.classList.contains('upload-btn') || 
         e.target.closest('.upload-btn')) {
       return;
     }
     
-    // Only trigger file input if we're not busy
     if (!busy) {
       fileInputRef.current?.click();
     }
@@ -52,14 +77,27 @@ export default function UploadPage() {
   const simulateProgress = () => {
     const interval = setInterval(() => {
       setProgress(prev => {
-        if (prev >= 95) {
+        if (prev >= 90) {
           clearInterval(interval);
-          return 95;
+          return 90;
         }
-        return prev + Math.random() * 15;
+        return prev + Math.random() * 10;
       });
-    }, 200);
+    }, 300);
     return interval;
+  };
+
+  const checkBackendHealth = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/health");
+      if (!response.ok) {
+        throw new Error(`Backend health check failed: ${response.status}`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.error("Backend health check failed:", error);
+      throw new Error("Cannot connect to backend server. Please ensure it's running on port 8000.");
+    }
   };
 
   const handleUpload = async (e) => {
@@ -67,16 +105,23 @@ export default function UploadPage() {
     e.stopPropagation();
     
     if (!file) {
-      alert("Please select a CSV file first.");
+      setError("Please select a CSV file first.");
       return;
     }
+    
+    setError(null);
     
     const formData = new FormData();
     formData.append("file", file);
 
     try {
       setBusy(true);
-      setProgress(0);
+      setProgress(5);
+      
+      // Check backend health first
+      await checkBackendHealth();
+      setProgress(15);
+
       const progressInterval = simulateProgress();
 
       const res = await fetch("http://localhost:8000/process", {
@@ -85,24 +130,36 @@ export default function UploadPage() {
       });
       
       clearInterval(progressInterval);
-      setProgress(100);
       
-      if (!res.ok) throw new Error(`Server error: ${res.status}`);
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => null);
+        const errorMessage = errorData?.detail || `Server error: ${res.status}`;
+        throw new Error(errorMessage);
+      }
 
+      setProgress(95);
       const data = await res.json();
+      
+      if (!data || !data.qc_summary) {
+        throw new Error("Invalid response from server");
+      }
       
       // Store data with method used
       const dataWithMethod = { ...data, method: imputationMethod };
-      localStorage.setItem("qcData", JSON.stringify(dataWithMethod));
+      
+      // Use in-memory storage instead of localStorage for artifacts
+      window.qcData = dataWithMethod;
+      
+      setProgress(100);
       
       // Navigate after a brief delay to show completion
       setTimeout(() => {
         navigate("/results", { replace: true });
-      }, 800);
+      }, 1000);
       
-    } catch (e) {
-      console.error("Upload error:", e);
-      alert("Error processing file. Please check your backend connection and try again.");
+    } catch (err) {
+      console.error("Upload error:", err);
+      setError(err.message || "Error processing file. Please try again.");
       setProgress(0);
     } finally {
       setBusy(false);
@@ -185,7 +242,7 @@ export default function UploadPage() {
                   {file ? file.name : 'Drag & Drop your dataset here'}
                 </div>
                 <div className="drop-subtext">
-                  {file ? 'Click to change file' : 'or click to browse files'}
+                  {file ? `${(file.size / 1024 / 1024).toFixed(2)} MB` : 'or click to browse files'}
                 </div>
               </div>
               
@@ -193,7 +250,7 @@ export default function UploadPage() {
                 type="file" 
                 ref={fileInputRef}
                 className="file-input" 
-                accept=".csv,.xlsx,.json"
+                accept=".csv,.xlsx,.xls,.json"
                 onChange={handleFileChange}
                 disabled={busy}
               />
@@ -214,6 +271,19 @@ export default function UploadPage() {
               </div>
             </div>
           </section>
+
+          {error && (
+            <div className="error-section" style={{
+              background: 'rgba(255, 71, 87, 0.1)',
+              border: '1px solid rgba(255, 71, 87, 0.3)',
+              borderRadius: '0.75rem',
+              padding: '1rem',
+              marginTop: '1rem',
+              color: '#ff4757'
+            }}>
+              <strong>Error:</strong> {error}
+            </div>
+          )}
 
           {busy && (
             <div className="progress-section active">

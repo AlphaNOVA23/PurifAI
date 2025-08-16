@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import UploadPage from "./UploadPage";
-import ResultsPage from "./ResultsPage";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import UploadPage from './UploadPage.jsx';
+import ResultsPage from './ResultsPage.jsx';
+import './enhanced-styles.css'; // Use the new single styles file
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Routes>
@@ -13,6 +14,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
-

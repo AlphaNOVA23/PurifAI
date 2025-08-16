@@ -2,14 +2,63 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./enhanced-styles.css";
 
+const API_BASE_URL = 'http://localhost:8000';
+
 export default function ResultsPage() {
   const [qcData, setQcData] = useState(null);
+  const [downloadError, setDownloadError] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Try to get data from memory first (for artifacts)
+    if (window.qcData) {
+      setQcData(window.qcData);
+      return;
+    }
+    
+    // Fallback to localStorage for regular usage
     const raw = localStorage.getItem("qcData");
-    if (raw) setQcData(JSON.parse(raw));
+    if (raw) {
+      try {
+        setQcData(JSON.parse(raw));
+      } catch (error) {
+        console.error("Error parsing QC data:", error);
+      }
+    }
   }, []);
+
+  const handleDownload = async (filename, type) => {
+    console.log(`Attempting to download file: ${filename} of type: ${type}`);
+    setDownloadError(null);
+    
+    if (!filename) {
+      setDownloadError(`No ${type} file available for download.`);
+      return;
+    }
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/download/${filename}`);
+      
+      if (!response.ok) {
+        throw new Error(`Download failed: ${response.status} ${response.statusText}`);
+      }
+      
+      // Get the blob and create download link
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      
+    } catch (error) {
+      console.error(`Error downloading ${type}:`, error);
+      setDownloadError(`Failed to download ${type}: ${error.message}`);
+    }
+  };
 
   if (!qcData) {
     return (
@@ -29,9 +78,11 @@ export default function ResultsPage() {
   }
 
   const checks = qcData.qc_summary?.qc_checks ?? {};
+  // The following lines are corrected to properly access the nested filenames
   const cleaned = qcData.qc_summary?.cleaned_file;
   const qcJson = qcData.qc_summary_json;
   const pdf = qcData.report_pdf;
+
   const method = qcData.method || 'k-NN';
   
   // Calculate statistics
@@ -143,6 +194,19 @@ export default function ResultsPage() {
               </h2>
             </div>
             <div className="card-body">
+              {downloadError && (
+                <div className="error-section" style={{
+                  background: 'rgba(255, 71, 87, 0.1)',
+                  border: '1px solid rgba(255, 71, 87, 0.3)',
+                  borderRadius: '0.75rem',
+                  padding: '1rem',
+                  marginBottom: '1.5rem',
+                  color: '#ff4757'
+                }}>
+                  <strong>Download Error:</strong> {downloadError}
+                </div>
+              )}
+              
               <div className="downloads-section">
                 <div className="download-card">
                   <div className="download-icon">📄</div>
@@ -150,14 +214,13 @@ export default function ResultsPage() {
                   <div className="download-description">
                     Your processed CSV file with imputed values
                   </div>
-                  <a
-                    href={`http://localhost:8000/download/${cleaned}`}
+                  <button
                     className="download-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    onClick={() => handleDownload(cleaned, 'CSV')}
+                    disabled={!cleaned}
                   >
                     Download CSV
-                  </a>
+                  </button>
                 </div>
 
                 <div className="download-card">
@@ -166,14 +229,13 @@ export default function ResultsPage() {
                   <div className="download-description">
                     Technical report with detailed statistics
                   </div>
-                  <a
-                    href={`http://localhost:8000/download/${qcJson}`}
+                  <button
                     className="download-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    onClick={() => handleDownload(qcJson, 'JSON')}
+                    disabled={!qcJson}
                   >
                     Download JSON
-                  </a>
+                  </button>
                 </div>
 
                 <div className="download-card">
@@ -182,14 +244,13 @@ export default function ResultsPage() {
                   <div className="download-description">
                     Professional PDF report for documentation
                   </div>
-                  <a
-                    href={`http://localhost:8000/download/${pdf}`}
+                  <button
                     className="download-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    onClick={() => handleDownload(pdf, 'PDF')}
+                    disabled={!pdf}
                   >
                     Download PDF
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
