@@ -1,5 +1,4 @@
-# FOR EVALUATORS
-## Project Links: On clicking the other document button on the official statathon page, post submission, a copy of the idea ppt was being downloaded. Hence below attached is the drive link for the actual other document (i.e the project report)
+## Project Links:
 
 * Project Idea, Presentation & Report: https://drive.google.com/drive/folders/1gwuIwsRakRHgJeiHyMtnxED_iv1vDSbR?usp=drive_link
 
