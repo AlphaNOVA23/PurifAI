@@ -5,16 +5,17 @@ import "./enhanced-styles.css";
 const API_BASE_URL = 'http://localhost:8000';
 
 export default function ResultsPage() {
+  // State to hold the entire response object
   const [qcResponse, setQcResponse] = useState(null);
   const [downloadError, setDownloadError] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Retrieve the QC response from localStorage
     const rawResponse = localStorage.getItem("qcResponse");
     if (rawResponse) {
       try {
-        const parsedData = JSON.parse(rawResponse);
-        setQcResponse(parsedData);
+        setQcResponse(JSON.parse(rawResponse));
       } catch (error) {
         console.error("Error parsing QC response from localStorage:", error);
       }
@@ -91,23 +92,23 @@ export default function ResultsPage() {
                 <tbody>
                   <tr>
                     <th>Initial Rows</th>
-                    <td>{typeof summary.initial_rows === 'number' ? summary.initial_rows : 'N/A'}</td>
+                    <td>{summary.initial_rows || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th>Final Rows</th>
-                    <td>{typeof summary.final_rows === 'number' ? summary.final_rows : 'N/A'}</td>
+                    <td>{summary.final_rows || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th>Missing Values (Before)</th>
-                    <td>{typeof summary.missing_before === 'number' ? summary.missing_before : 'N/A'}</td>
+                    <td>{summary.missing_before || 'N/A'}</td>
                   </tr>
                    <tr>
                     <th>Missing Values (After)</th>
-                    <td>{typeof summary.missing_after === 'number' ? summary.missing_after : 'N/A'}</td>
+                    <td>{summary.missing_after || 'N/A'}</td>
                   </tr>
                   <tr>
                     <th>Outliers Detected</th>
-                    <td>{typeof summary.outliers_detected === 'number' ? summary.outliers_detected : 'N/A'}</td>
+                    <td>{summary.outliers_detected || 'N/A'}</td>
                   </tr>
                 </tbody>
               </table>
@@ -128,10 +129,6 @@ export default function ResultsPage() {
                  <div className="method-item">
                     <span className="method-label">Imputation</span>
                     <span className="method-value">{summary.imputation_method?.toUpperCase() || 'N/A'}</span>
-                </div>
-                {/* *** NOTE ADDED AS REQUESTED *** */}
-                <div style={{marginTop: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)', color: 'var(--text-muted)', fontSize: '0.9rem'}}>
-                    <strong>Note:</strong> After imputation, the number of missing values should be 0. If you see 'N/A', it indicates a data processing issue.
                 </div>
             </div>
           </div>
