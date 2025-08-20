@@ -1,38 +1,53 @@
+# FOR EVALUATORS
+## Project Links: On clicking the other document button on the official statathon page, post submission, a copy of the idea ppt was being downloaded. Hence below attached is the drive link for the actual other document (i.e the project report)
+
+* Project Idea, Presentation & Report: https://drive.google.com/drive/folders/1gwuIwsRakRHgJeiHyMtnxED_iv1vDSbR?usp=drive_link
+
+* GitHub Repository (Source Code): https://github.com/AlphaNOVA23/PurifAI
+
+* Demo Video (Youtube): https://www.youtube.com/watch?v=D1TbUpI67WE
+
 # PurifAI 🧹✨
 
-An AI-powered data cleaning tool with intelligent imputation and comprehensive quality control reporting.
+An AI-powered data cleaning tool with intelligent imputation, robust outlier detection, and comprehensive quality control reporting.
 
 ## 🎯 Overview
 
-**PurifAI** is an AI-assisted data cleaning tool that (in the prototype/poc version):
+**PurifAI** is an AI-assisted data cleaning tool that empowers users to upload raw CSV files and apply a suite of sophisticated algorithms to improve data quality. It automates the detection of outliers and the imputation of missing values, culminating in a professional, multi-page PDF report with rich visualizations that detail the entire cleaning process and its impact on the dataset.
 
-* Accepts CSV file uploads through a modern web interface
-* Uses k-NN (k-Nearest Neighbors) imputation to fill missing numeric values
-* Generates quality control (QC) reports showing before/after missing data statistics
-* Provides downloadable outputs (cleaned CSV, QC JSON, and PDF report)
+This project was developed for **Statathon 2025**.
 
 ## 🏗️ Architecture
 
 ### **Frontend (React):**
-* `UploadPage.jsx`: File upload interface with progress indication and method selection
-* `ResultsPage.jsx`: Displays QC summary table and download links
-* `App.js`: Routes between upload and results pages
-* `enhanced-styles.css`: Modern dark theme with glassmorphism effects
+* `UploadPage.jsx`: File upload interface with method selection.
+* `ResultsPage.jsx`: Displays a QC summary and download links for all generated files.
+* `UserGuide.jsx`: A comprehensive guide explaining the tool's features and methods.
+* `App.js`: Handles routing between the application's pages.
+* `enhanced-styles.css`: A modern, responsive dark theme.
 
 ### **Backend (FastAPI):**
-* `main.py`: Handles file processing, k-NN imputation, and generates outputs
-* Creates three types of outputs: cleaned CSV, QC JSON summary, PDF report
-* CORS enabled for seamless frontend-backend communication
+* `main.py`: Handles file processing, all data cleaning logic, visualization, and report generation.
+* Creates three types of outputs: a cleaned CSV, a QC JSON summary, and a multi-page PDF report.
+* CORS enabled for seamless frontend-backend communication.
 
 ## ✨ Key Features
 
-1. **🤖 Smart Data Cleaning**: Uses scikit-learn's KNNImputer with 3 neighbors for missing numeric data
-2. **📊 QC Reporting**: Tracks missing values before/after cleaning per column
-3. **📁 Multiple Export Formats**: CSV, JSON, and PDF outputs
-4. **🎨 Modern UI**: Dark theme with smooth animations and responsive design
-5. **📱 Mobile Friendly**: Responsive design that works on all devices
-6. **⚡ Real-time Progress**: Visual progress indicators during processing
-7. **🔄 Method Selection**: Choose between Mean, Median, or k-NN imputation methods
+1.  **🤖 Advanced Outlier Detection**: Choose from three industry-standard algorithms:
+    * **IQR (Interquartile Range)**
+    * **Z-Score**
+    * **Isolation Forest** (Machine Learning)
+2.  **🧠 Intelligent Imputation**: Select from three methods to handle missing values:
+    * **Mean**
+    * **Median**
+    * **k-NN (k-Nearest Neighbors)** (Machine Learning)
+3.  **📊 Professional PDF Reporting**: Automatically generates a detailed report with:
+    * High-level cleaning summary.
+    * In-depth analysis and visualizations of the **original** dataset.
+    * A "before and after" comparison to show the impact of cleaning.
+    * A full analysis and visualizations of the **final, cleaned** dataset.
+4.  **📁 Multiple Export Formats**: Download the cleaned data (CSV), a technical summary (JSON), and the full analytical report (PDF).
+5.  **🎨 Modern UI**: A responsive dark theme that works seamlessly on desktop and mobile devices.
 
 ## 🚀 Quick Start
 
@@ -51,15 +66,22 @@ An AI-powered data cleaning tool with intelligent imputation and comprehensive q
    ```
 
 2. **Install Python dependencies**
-   ```bash
-   pip install fastapi uvicorn pandas scikit-learn python-multipart reportlab
-   ```
+    ```bash
+    # Create and activate a virtual environment
+    python -m venv venv
+    # On Windows: venv\Scripts\activate
+    # On macOS/Linux: source venv/bin/activate
+
+    pip install -r requirements.txt
+    ```
+
 3. **Create a New React App**
 ```bash
 npx create-react-app frontend
 cd frontend
 ```
 - this will create a new frontend folder
+
 4. **Install Node.js dependencies in the frontend folder**
    ```bash
    npm install react react-dom react-router-dom
@@ -85,19 +107,18 @@ cd frontend
 ## 📝 Usage
 
 ### Step 1: Upload Dataset
-- Drag and drop your CSV file or click to browse
-- Choose your preferred imputation method (Mean, Median, or k-NN)-- ONLY KNN WORKS IN CURRENT ITERATION
-- Click "Upload & Process" to start cleaning
+* Drag and drop your CSV file or click to browse.
+* Choose your preferred outlier detection and imputation methods.
+* Click "Start Cleaning" to begin the process.
 
 ### Step 2: Review Results
-- View the quality control summary with before/after statistics
-- See detailed column-by-column analysis
-- Check the improvement metrics
+* View the quality control summary with before/after statistics.
+* See which methods were applied to your data.
 
 ### Step 3: Download Outputs
-- **Cleaned CSV**: Your dataset with missing values filled
-- **QC JSON**: Technical report with detailed statistics
-- **PDF Report**: Professional summary for documentation
+* **Cleaned CSV**: Your dataset with outliers handled and missing values filled.
+* **QC JSON**: A technical report with detailed statistics.
+* **PDF Report**: The professional, multi-page summary with all visualizations.
 
 ## 📊 Sample Data
 
@@ -106,71 +127,51 @@ The repository includes test datasets with missing values.
 ## 🛠️ API Endpoints
 
 ### `POST /process`
-Upload and process a CSV file with missing values.
+Upload and process a CSV file.
 
-**Request:** Multipart form data with CSV file  
-**Response:** JSON with QC summary and file references
+* **Request:** Multipart form data with a CSV file and the selected `outlier_method` and `imputation_method`.
+* **Response:** JSON with a QC summary and references to the downloadable files.
 
 ### `GET /download/{filename}`
-Download processed files (CSV, JSON, or PDF).
+Download the processed files (CSV, JSON, or PDF).
 
-**Parameters:** `filename` - Name of the file to download  
-**Response:** File download
+* **Parameters:** `filename` - The name of the file to download.
+* **Response:** The requested file.
 
-### `GET /`
-Health check endpoint.
+### `GET /health`
+A health check endpoint for the backend.
 
-**Response:** `{"message": "Backend running"}`
+* **Response:** `{"status": "ok"}`
 
 ## 🧪 Testing
 
-Use the provided sample datasets to test different scenarios:
-
-```bash
-# Test with simple data
-curl -X POST "http://localhost:8000/process" \
-     -H "accept: application/json" \
-     -H "Content-Type: multipart/form-data" \
-     -F "file=@sample.csv"
-```
+Use the provided sample dataset/s to test different scenarios:
 
 ## 🎨 UI Features
 
-- **Modern Dark Theme**: Easy on the eyes with glassmorphism effects
+- **Modern Dark Theme**: Easy on the eyes
 - **Drag & Drop Upload**: Intuitive file upload experience
 - **Real-time Progress**: Visual feedback during processing
-- **Responsive Design**: Works perfectly on desktop and mobile
-- **Interactive Elements**: Hover effects and smooth animations
+- **Responsive Design**: Works perfectly on desktop browsers
 - **Professional Results Display**: Clean tables and download cards
-
-## 🔧 Configuration
-
-### Backend Configuration
-- **Upload Directory**: `uploads/` (auto-created)
-- **Output Directory**: `outputs/` (auto-created)
-- **k-NN Neighbors**: 3 (configurable in `main.py`)
-- **CORS**: Enabled for all origins (restrict in production)
-
-### Frontend Configuration
-- **API Base URL**: `http://localhost:8000` (configurable)
-- **Supported Formats**: CSV, Excel (.xlsx), JSON
-- **Max File Size**: Limited by browser and server settings
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1.  Fork the repository
+2.  Create your feature branch (`git checkout -b feature/amazing-feature`)
+3.  Commit your changes (`git commit -m 'Add some amazing feature'`)
+4.  Push to the branch (`git push origin feature/amazing-feature`)
+5.  Open a Pull Request
 
 ## 📋 Roadmap
 
-- [ ] Support for additional imputation methods (MICE, Iterative)
+- [ ] Support for JSON upload.
+- [ ] Support for additional imputation and outlier detection methods.
 - [ ] Categorical data imputation
 - [ ] Batch file processing
 - [ ] User authentication and data persistence
 - [ ] Advanced visualization charts
+- [ ] Diagonostic tool
 - [ ] Export to additional formats (Excel, Parquet)
 - [ ] API rate limiting and security enhancements
 

@@ -1,0 +1,251 @@
+SurveyID,Household_Size,Annual_Income_INR,State,District,Children_in_Household,Education_Level,Employment_Status,Primary_Occupation,Has_Electricity,Water_Source,Design_Weight
+1001,5,96815.0,Maharashtra,Osmanabad,2,Bachelors,Employed,Laborer,Yes,Tanker,0.62
+1002,5,783040.0,Maharashtra,Pune,2,Masters,Student,Not Applicable,Yes,Tap,2.3
+1003,7,443233.0,Maharashtra,Nashik,2,Bachelors,Employed,Farmer,Yes,Hand Pump,
+1004,5,232983.0,Maharashtra,Kolhapur,1,Bachelors,Employed,Farmer,Yes,Hand Pump,2.8
+1005,4,1092770.0,Maharashtra,Pune,2,Masters,Employed,Government Job,Yes,Tap,1.81
+1006,4,361147.0,Maharashtra,Mumbai City,1,Masters,Employed,Government Job,Yes,Tap,2.98
+1007,6,746683.0,Maharashtra,Pune,4,High School,Retired,Not Applicable,Yes,Tap,2.17
+1008,5,492811.0,Maharashtra,Nagpur,4,High School,Employed,Farmer,Yes,Hand Pump,2.22
+1009,6,588662.0,Maharashtra,Mumbai Suburban,3,High School,Employed,Business Owner,Yes,Tap,0.72
+1010,3,,Maharashtra,Thane,2,High School,Employed,Government Job,Yes,Tap,2.12
+1011,4,686651.0,Maharashtra,Pune,0,Masters,Employed,Business Owner,Yes,Tap,1.94
+1012,3,1299296.0,Maharashtra,Mumbai Suburban,0,Bachelors,Homemaker,Not Applicable,Yes,Tap,1.85
+1013,6,359896.0,Maharashtra,Yavatmal,3,Bachelors,Student,Not Applicable,Yes,Tap,0.79
+1014,3,530968.0,Maharashtra,Mumbai City,0,Bachelors,Student,Not Applicable,Yes,Tap,2.97
+1015,1,132939.0,Maharashtra,Dhule,0,Middle School,Employed,Farmer,Yes,Community Tap,1.37
+1016,6,566707.0,Maharashtra,Nashik,3,High School,Unemployed,Not Applicable,Yes,Well,2.63
+1017,3,555979.0,Maharashtra,Nanded,0,Bachelors,Employed,Government Job,Yes,Hand Pump,2.38
+1018,1,625332.0,Maharashtra,Raigad,0,Middle School,Employed,Business Owner,Yes,Tanker,1.01
+1019,5,44725.0,Maharashtra,Chandrapur,3,,Homemaker,Not Applicable,Yes,Hand Pump,1.0
+1020,5,60264.0,Maharashtra,Jalgaon,0,Middle School,Retired,Not Applicable,Yes,Tanker,1.8
+1021,7,136417.0,Maharashtra,Solapur,5,High School,Employed,Laborer,Yes,Hand Pump,2.14
+1022,5,,Maharashtra,Nagpur,4,High School,Employed,Farmer,Yes,Tap,2.46
+1023,6,932234.0,Maharashtra,Pune,3,,Homemaker,Not Applicable,Yes,Tap,0.9
+1024,2,220125.0,Maharashtra,Nashik,1,Middle School,Employed,Laborer,Sometimes,Hand Pump,1.24
+1025,4,557957.0,Maharashtra,Nashik,3,Bachelors,Student,Not Applicable,Yes,Tanker,1.9
+1026,4,763892.0,Maharashtra,Mumbai City,0,Bachelors,Employed,Farmer,Yes,Tap,2.71
+1027,4,662618.0,Maharashtra,Mumbai City,0,High School,Employed,Farmer,Yes,Tap,2.76
+1028,5,392538.0,Maharashtra,Aurangabad,1,Bachelors,Student,Not Applicable,Yes,Tanker,2.63
+1029,9,3027837.0,Maharashtra,Mumbai Suburban,1,Masters,Employed,Government Job,Yes,Tap,0.92
+1030,5,149968.0,Maharashtra,Aurangabad,3,High School,Unemployed,Not Applicable,No,Hand Pump,2.84
+1031,4,1318539.0,Maharashtra,Pune,2,High School,Employed,Government Job,Yes,Tap,2.93
+1032,7,89101.0,Maharashtra,Bhandara,5,High School,Unemployed,Not Applicable,Yes,Hand Pump,2.14
+1033,7,285683.0,Maharashtra,Mumbai Suburban,6,Masters,Student,Not Applicable,Yes,Tap,0.97
+1034,Three,291206.0,Maharashtra,Mumbai City,0,Middle School,Employed,Business Owner,Yes,Tap,1.28
+1035,1,740196.0,Maharashtra,Mumbai City,0,Bachelors,Employed,Business Owner,Yes,Tanker,0.97
+1036,4,272892.0,Maharashtra,Nanded,3,Middle School,Employed,Farmer,Yes,Community Tap,1.56
+1037,1,509567.0,Maharashtra,Thane,0,Masters,Employed,Farmer,Yes,Tanker,2.43
+1038,1,333701.0,Maharashtra,Nashik,0,Middle School,Employed,Government Job,Yes,Tap,2.03
+1039,2,229587.0,Maharashtra,Palghar,1,High School,Employed,Farmer,Yes,Tanker,0.7
+1040,3,87228.0,Maharashtra,Wardha,2,Uneducated,Student,Not Applicable,Yes,Community Tap,1.89
+1041,6,453961.0,Maharashtra,Buldhana,1,High School,Employed,Farmer,Yes,Tap,2.2
+1042,4,353520.0,Maharashtra,Kolhapur,2,Bachelors,Employed,Business Owner,Yes,Hand Pump,1.5
+1043,6,384787.0,Maharashtra,Nagpur,4,High School,Employed,Business Owner,Yes,Community Tap,0.66
+1044,4,621380.0,Maharashtra,Pune,3,PhD,Retired,Not Applicable,Yes,Tap,2.63
+1045,5,464074.0,Maharashtra,Nashik,1,Masters,Unemployed,Not Applicable,Yes,Community Tap,1.32
+1046,1,205557.0,Maharashtra,Osmanabad,0,,Employed,Laborer,Yes,Hand Pump,1.33
+1047,6,,Maharashtra,Aurangabad,0,Uneducated,Employed,Farmer,Yes,Tanker,2.55
+1048,3,528009.0,Maharashtra,Mumbai City,1,Masters,Employed,Government Job,Yes,Community Tap,1.9
+1049,6,1815861.0,Maharashtra,Thane,5,Middle School,Employed,Government Job,Yes,Tap,
+1050,3,88230.0,Maharashtra,Palghar,0,High School,Employed,Laborer,Yes,Hand Pump,2.52
+1051,4,229917.0,Maharashtra,Aurangabad,1,Uneducated,Homemaker,Not Applicable,Yes,Community Tap,1.45
+1052,4,56095.0,Maharashtra,Wardha,1,Bachelors,Unemployed,Not Applicable,Yes,Community Tap,2.25
+1053,3,286644.0,Maharashtra,Washim,1,High School,Employed,Business Owner,Yes,Well,1.45
+1054,5,450555.0,Maharashtra,Sindhudurg,1,High School,Employed,Farmer,Yes,Tanker,1.55
+1055,1,643033.0,Maharashtra,Mumbai Suburban,0,,Homemaker,Not Applicable,Yes,Tap,1.6
+1056,1,98355.0,Maharashtra,Bhandara,0,Middle School,Employed,Laborer,No,Well,0.91
+1057,5,1026124.0,Maharashtra,Pune,3,Masters,Employed,Business Owner,Yes,Well,2.94
+1058,5,68062.0,Maharashtra,Bhandara,1,Bachelors,Employed,Laborer,Yes,Tanker,2.86
+1059,3,553342.0,Maharashtra,Pune,2,Masters,Retired,Not Applicable,Yes,Tap,1.18
+1060,6,918008.0,Maharashtra,Mumbai Suburban,3,High School,Employed,Business Owner,Yes,Tap,2.78
+1061,3,,Maharashtra,Pune,2,Uneducated,Employed,Government Job,Yes,Tap,0.99
+1062,8,558018.0,Maharashtra,Raigad,4,High School,Employed,Government Job,Yes,Community Tap,2.77
+1063,5,695828.0,Maharashtra,Chandrapur,2,Middle School,Unemployed,Not Applicable,Yes,Tap,1.52
+1064,6,Seven Lakhs,Maharashtra,Nashik,3,High School,Employed,IT Professional,Yes,Tanker,0.95
+1065,3,421051.0,Maharashtra,Thane,2,High School,Unemployed,Not Applicable,Yes,Well,1.78
+1066,4,108160.0,Maharashtra,Jalna,0,High School,Unemployed,Not Applicable,Yes,Tanker,2.32
+1067,5,147928.0,Maharashtra,Jalgaon,1,Middle School,Employed,Laborer,Yes,Well,2.3
+1068,2,,Maharashtra,Mumbai Suburban,1,Bachelors,Employed,Government Job,Yes,Tap,1.02
+1069,2,195030.0,Maharashtra,Amravati,1,High School,Student,Not Applicable,Yes,Tanker,1.59
+1070,7,638575.0,Maharashtra,Mumbai Suburban,1,Bachelors,Employed,Farmer,Yes,Hand Pump,1.03
+1071,1,66532.0,Maharashtra,Nandurbar,0,High School,Employed,Farmer,Yes,Tap,2.33
+1072,3,124067.0,Maharashtra,Kolhapur,1,Masters,Employed,Laborer,Yes,Tanker,1.99
+1073,2,241893.0,Maharashtra,Dhule,0,Middle School,Employed,Laborer,Yes,Community Tap,1.93
+1074,3,442927.0,Maharashtra,Latur,2,High School,Retired,Not Applicable,Yes,Tap,0.97
+1075,2,1313630.0,Maharashtra,Raigad,1,High School,Employed,IT Professional,Yes,Tanker,1.73
+1076,4,754044.0,Maharashtra,Pune,3,High School,Unemployed,Not Applicable,Yes,Tap,1.51
+1077,7,401009.0,Maharashtra,Pune,2,Middle School,Homemaker,Not Applicable,Yes,Tanker,2.72
+1078,4,246621.0,Maharashtra,Solapur,3,Middle School,Employed,Laborer,Yes,Tanker,1.74
+1079,5,86478.0,Maharashtra,Washim,1,High School,Homemaker,Not Applicable,Yes,Well,0.94
+1080,8,299497.0,Maharashtra,Pune,6,Masters,Employed,Farmer,Yes,Well,2.4
+1081,6,566548.0,Maharashtra,Pune,1,PhD,Employed,Farmer,Yes,Hand Pump,0.73
+1082,22,400023.0,Maharashtra,Pune,0,Masters,Employed,Government Job,Yes,Tap,1.21
+1083,5,1443515.0,Maharashtra,Mumbai City,0,High School,Employed,Business Owner,Yes,Tanker,2.85
+1084,5,1147290.0,Maharashtra,Mumbai Suburban,1,Middle School,Employed,Business Owner,Yes,Tap,1.34
+1085,5,278861.0,Maharashtra,Beed,2,High School,Employed,Farmer,Yes,Tanker,2.61
+1086,7,443399.0,Maharashtra,Kolhapur,1,PhD,Employed,Business Owner,Yes,Well,1.0
+1087,3,699810.0,Maharashtra,Amravati,2,High School,Student,Not Applicable,Yes,Hand Pump,2.12
+1088,7,808535.0,Maharashtra,Raigad,6,High School,Employed,Government Job,Yes,Well,2.62
+1089,2,721093.0,Maharashtra,Mumbai Suburban,1,High School,Homemaker,Not Applicable,Yes,Tap,2.15
+1090,2,245606.0,Maharashtra,Raigad,1,High School,Employed,Laborer,Yes,Tanker,2.76
+1091,4,384204.0,Maharashtra,Aurangabad,3,High School,Homemaker,Not Applicable,Yes,Tap,2.91
+1092,4,470710.0,Maharashtra,Washim,3,Uneducated,Unemployed,Not Applicable,Yes,Tanker,1.01
+1093,2,533367.0,Maharashtra,Nashik,1,High School,Student,Not Applicable,Yes,Hand Pump,1.19
+1094,6,1187752.0,Maharashtra,Pune,4,Bachelors,Unemployed,Not Applicable,Yes,Tap,1.92
+1095,5,236537.0,Maharashtra,Chandrapur,2,Bachelors,Homemaker,Not Applicable,Yes,Hand Pump,2.78
+1096,4,136959.0,Maharashtra,Kolhapur,1,Masters,Employed,Farmer,Yes,Community Tap,1.82
+1097,6,661267.0,Maharashtra,Thane,0,Bachelors,Employed,Business Owner,Yes,Tap,1.63
+1098,5,166829.0,Maharashtra,Parbhani,3,Bachelors,Unemployed,Not Applicable,Yes,Community Tap,1.79
+1099,1,665949.0,Maharashtra,Solapur,0,High School,Unemployed,Not Applicable,Yes,Tanker,1.89
+1100,4,467841.0,Maharashtra,Aurangabad,3,Bachelors,Unemployed,Not Applicable,Yes,Community Tap,2.22
+1101,3,173054.0,Maharashtra,Solapur,0,High School,Employed,Laborer,Yes,Tanker,1.84
+1102,9,306464.0,Maharashtra,Kolhapur,1,High School,Unemployed,Not Applicable,Yes,Tanker,2.45
+1103,4,367064.0,Maharashtra,Thane,1,Bachelors,Employed,Government Job,Yes,Tap,1.46
+1104,7,69624.0,Maharashtra,Nashik,3,High School,Employed,Farmer,Yes,Well,2.14
+1105,2,222959.0,Maharashtra,Yavatmal,1,Middle School,Unemployed,Not Applicable,Yes,Tap,0.76
+1106,1,213194.0,Maharashtra,Solapur,0,High School,Employed,Farmer,Yes,Tap,0.64
+1107,3,,Maharashtra,Raigad,2,Masters,Student,Not Applicable,Yes,Community Tap,2.14
+1108,5,808136.0,Maharashtra,Jalgaon,0,High School,Employed,Business Owner,Yes,Tap,1.14
+1109,4,730109.0,Maharashtra,Thane,1,Masters,Unemployed,Not Applicable,Yes,Hand Pump,2.01
+1110,6,114716.0,Maharashtra,Nagpur,2,High School,Employed,Farmer,Yes,Tap,2.28
+1111,3,157047.0,Maharashtra,Wardha,2,Middle School,Employed,Laborer,Yes,Hand Pump,0.9
+1112,2,109880.0,Maharashtra,Latur,1,Masters,Employed,Farmer,Yes,Hand Pump,1.43
+1113,3,1806938.0,Maharashtra,Mumbai Suburban,1,High School,Employed,Business Owner,Yes,Tap,2.67
+1114,6,676577.0,Maharashtra,Yavatmal,1,Middle School,Student,Not Applicable,Yes,Tanker,1.2
+1115,10,268126.0,Maharashtra,Sangli,3,Uneducated,Student,Not Applicable,Yes,Hand Pump,0.74
+1116,7,1265048.0,Maharashtra,Mumbai City,0,Bachelors,Employed,Business Owner,Yes,Tap,
+1117,4,,Maharashtra,Mumbai Suburban,3,,Employed,Business Owner,Yes,Community Tap,1.61
+1118,4,1159089.0,Maharashtra,Thane,2,High School,Homemaker,Not Applicable,Yes,Tap,2.81
+1119,5,2012717.0,Maharashtra,Mumbai Suburban,4,Masters,Employed,Business Owner,Yes,Hand Pump,2.05
+1120,1,854319.0,Maharashtra,Mumbai City,0,Bachelors,Employed,Business Owner,Yes,Tap,0.63
+1121,2,663091.0,Maharashtra,Nashik,0,Bachelors,Employed,Farmer,Yes,Tap,1.87
+1122,4,1489919.0,Maharashtra,Mumbai Suburban,0,High School,Employed,Business Owner,Yes,Tap,0.61
+1123,6,309306.0,Maharashtra,Aurangabad,0,Bachelors,Student,Not Applicable,Yes,Tap,1.99
+1124,9,606575.0,Maharashtra,Ahmednagar,0,Uneducated,Employed,Government Job,Yes,Tanker,2.81
+1125,6,Not Disclosed,Maharashtra,Mumbai Suburban,4,High School,Employed,IT Professional,Yes,Tap,1.62
+1126,4,440427.0,Maharashtra,Kolhapur,3,Bachelors,Unemployed,Not Applicable,Yes,Tanker,0.75
+1127,5,2197969.0,Maharashtra,Pune,4,Masters,Employed,IT Professional,Yes,Tap,1.86
+1128,7,511933.0,Maharashtra,Pune,4,Bachelors,Student,Not Applicable,Yes,Tap,1.68
+1129,5,789744.0,Maharashtra,Thane,0,Middle School,Unemployed,Not Applicable,Yes,Tap,2.16
+1130,2,573544.0,Maharashtra,Raigad,1,High School,Student,Not Applicable,Yes,Well,1.8
+1131,4,302467.0,Maharashtra,Washim,0,High School,Employed,Business Owner,Yes,Community Tap,0.98
+1132,1,1282037.0,Maharashtra,Mumbai City,0,High School,Employed,IT Professional,Yes,Hand Pump,2.71
+1133,3,318258.0,Maharashtra,Pune,1,Bachelors,Employed,Farmer,Yes,Tap,2.14
+1134,5,75208.0,Maharashtra,Nandurbar,0,High School,Employed,Farmer,Yes,Tanker,2.28
+1135,7,66613.0,Maharashtra,Beed,0,High School,Unemployed,Not Applicable,Yes,Tanker,1.76
+1136,4,292920.0,Maharashtra,Nagpur,2,High School,Unemployed,Not Applicable,Yes,Hand Pump,1.44
+1137,3,294372.0,Maharashtra,Nashik,2,Masters,Employed,Government Job,Yes,Community Tap,1.43
+1138,7,185102.0,Maharashtra,Raigad,4,Bachelors,Employed,Laborer,Yes,Community Tap,1.13
+1139,6,793952.0,Maharashtra,Mumbai Suburban,5,Bachelors,Employed,Government Job,Yes,Tap,2.18
+1140,5,519477.0,Maharashtra,Kolhapur,4,High School,Employed,Government Job,Yes,Tanker,2.12
+1141,6,232554.0,Maharashtra,Raigad,0,High School,Unemployed,Not Applicable,Yes,Hand Pump,2.4
+1142,18,432357.0,Maharashtra,Mumbai City,0,Bachelors,Retired,Not Applicable,Yes,Tap,2.06
+1143,1,426343.0,Maharashtra,Aurangabad,0,Bachelors,Student,Not Applicable,Yes,Well,2.64
+1144,4,226771.0,Maharashtra,Nashik,0,Bachelors,Employed,Farmer,Yes,Tanker,2.05
+1145,4,808583.0,Maharashtra,Thane,0,Middle School,Employed,Government Job,Yes,Tap,1.81
+1146,3,563353.0,Maharashtra,Kolhapur,2,High School,Student,Not Applicable,Yes,Community Tap,2.25
+1147,6,1628162.0,Maharashtra,Kolhapur,1,High School,Unemployed,Not Applicable,Yes,Tanker,2.37
+1148,6,416529.0,Maharashtra,Thane,1,Masters,Employed,Farmer,Yes,Well,1.42
+1149,2,487849.0,Maharashtra,Pune,1,Bachelors,Employed,Business Owner,Yes,Tap,1.13
+1150,3,404749.0,Maharashtra,Thane,1,Masters,Employed,Government Job,Yes,Well,1.67
+1151,3,1345317.0,Maharashtra,Raigad,2,High School,Unemployed,Not Applicable,Yes,Tap,1.04
+1152,5,323779.0,Maharashtra,Jalgaon,0,Middle School,Employed,Business Owner,Partial,Tanker,2.26
+1153,6,646002.0,Maharashtra,Aurangabad,2,Masters,Employed,Farmer,Yes,Well,2.76
+1154,5,910311.0,Maharashtra,Pune,3,Bachelors,Employed,Government Job,Yes,Tap,2.88
+1155,11,,Maharashtra,Thane,8,Bachelors,Unemployed,Not Applicable,Yes,Tap,1.64
+1156,6,523501.0,Maharashtra,Nashik,None,Bachelors,Employed,Farmer,Yes,Tanker,1.13
+1157,5,,Maharashtra,Mumbai City,4,Masters,Unemployed,Not Applicable,Yes,Community Tap,1.21
+1158,3,196735.0,Maharashtra,Chandrapur,1,Bachelors,Retired,Not Applicable,Yes,Tanker,1.14
+1159,3,368008.0,Maharashtra,Kolhapur,2,Bachelors,Employed,Government Job,Yes,Hand Pump,1.55
+1160,5,445061.0,Maharashtra,Mumbai City,0,High School,Employed,Government Job,Yes,Tap,1.57
+1161,5,1064405.0,Maharashtra,Thane,3,High School,Employed,Government Job,Yes,Hand Pump,1.27
+1162,4,204017.0,Maharashtra,Sangli,0,Bachelors,Retired,Not Applicable,Yes,Well,1.85
+1163,5,90354.0,Maharashtra,Kolhapur,2,Masters,Employed,Laborer,Yes,Tanker,1.02
+1164,2,358575.0,Maharashtra,Nashik,1,High School,Employed,Farmer,Yes,Community Tap,1.39
+1165,12,602396.0,Maharashtra,Nashik,8,Bachelors,Employed,Government Job,Yes,Tap,2.92
+1166,5,217376.0,Maharashtra,Nagpur,2,High School,Homemaker,Not Applicable,Yes,Tap,1.19
+1167,11,182754.0,Maharashtra,Gadchiroli,0,Masters,Employed,Laborer,Yes,Hand Pump,1.07
+1168,5,545508.0,Maharashtra,Thane,4,Masters,Employed,Farmer,Yes,Well,1.46
+1169,3,767800.0,Maharashtra,Nagpur,1,High School,Unemployed,Not Applicable,Yes,Hand Pump,2.77
+1170,1,196289.0,Maharashtra,Mumbai Suburban,0,High School,Unemployed,Not Applicable,Yes,Tap,0.75
+1171,4,636037.0,Maharashtra,Aurangabad,0,PhD,Employed,Business Owner,Yes,Tap,2.74
+1172,2,186376.0,Maharashtra,Wardha,1,Middle School,Homemaker,Not Applicable,Yes,Tanker,2.29
+1173,1,94775.0,Maharashtra,Sangli,0,Bachelors,Student,Not Applicable,No,Tanker,1.06
+1174,6,302203.0,Maharashtra,Nagpur,4,Bachelors,Employed,Business Owner,Yes,Well,2.84
+1175,3,442587.0,Maharashtra,Thane,1,Middle School,Employed,Government Job,Yes,Hand Pump,1.92
+1176,3,756809.0,Maharashtra,Thane,2,Bachelors,Employed,Government Job,Yes,Well,1.41
+1177,2,123569.0,Maharashtra,Kolhapur,0,High School,Unemployed,Not Applicable,Yes,Well,2.54
+1178,4,154813.0,Maharashtra,Raigad,1,High School,Homemaker,Not Applicable,Yes,Hand Pump,0.79
+1179,4,59672.0,Maharashtra,Washim,0,Middle School,Employed,Laborer,Yes,Well,2.19
+1180,5,,Maharashtra,Mumbai Suburban,Two,Bachelors,Employed,Farmer,Yes,Tap,2.16
+1181,6,73999.0,Maharashtra,Jalna,3,Bachelors,Retired,Not Applicable,Yes,Community Tap,2.33
+1182,1,558943.0,Maharashtra,Mumbai Suburban,0,High School,Employed,Business Owner,Yes,Tap,0.71
+1183,3,276842.0,Maharashtra,Nagpur,0,High School,Employed,Farmer,Yes,Tap,2.26
+1184,7,1425623.0,Maharashtra,Mumbai Suburban,0,High School,Homemaker,Not Applicable,Yes,Tap,2.35
+1185,3,494243.0,Maharashtra,Kolhapur,0,Masters,Employed,Government Job,Yes,Community Tap,1.56
+1186,7,951288.0,Maharashtra,Mumbai Suburban,3,Masters,Homemaker,Not Applicable,Yes,Tap,2.91
+1187,2,89466.0,Maharashtra,Solapur,0,Middle School,Unemployed,Not Applicable,Yes,Hand Pump,2.93
+1188,6,1468459.0,Maharashtra,Pune,1,Masters,Employed,IT Professional,Yes,Hand Pump,2.09
+1189,6,448479.0,Maharashtra,Raigad,3,Bachelors,Employed,Farmer,Yes,Well,0.65
+1190,1,438580.0,Maharashtra,Nashik,0,Uneducated,Employed,Farmer,Yes,Tanker,1.05
+1191,4,1945065.0,Maharashtra,Mumbai Suburban,2,Bachelors,Employed,Government Job,Yes,Tap,2.86
+1192,5,156133.0,Maharashtra,Mumbai Suburban,1,Uneducated,Employed,Farmer,Yes,Hand Pump,1.23
+1193,5,596976.0,Maharashtra,Nashik,1,Middle School,Employed,Business Owner,Yes,Hand Pump,
+1194,3,504481.0,Maharashtra,Pune,0,Masters,Unemployed,Not Applicable,Yes,Tap,2.78
+1195,6,635043.0,Maharashtra,Mumbai Suburban,3,Bachelors,Employed,Government Job,Yes,Tap,2.12
+1196,5,1750223.0,Maharashtra,Nashik,4,Middle School,Unemployed,Not Applicable,Yes,Community Tap,1.34
+1197,4,255363.0,Maharashtra,Aurangabad,0,Bachelors,Employed,Business Owner,Yes,Hand Pump,1.78
+1198,6,180105.0,Maharashtra,Raigad,3,Masters,Employed,Laborer,Yes,Hand Pump,1.52
+1199,7,162860.0,Maharashtra,Solapur,2,Uneducated,Employed,Laborer,Yes,Hand Pump,2.44
+1200,4,388103.0,Maharashtra,Jalna,3,Middle School,Employed,Farmer,Partial,Tap,2.15
+1201,8,305946.0,Maharashtra,Pune,5,Bachelors,Retired,Not Applicable,Yes,Tap,0.97
+1202,3,573550.0,Maharashtra,Kolhapur,1,High School,Employed,Business Owner,Yes,Well,0.86
+1203,7,1277982.0,Maharashtra,Pune,5,Masters,Homemaker,Not Applicable,Yes,Tap,1.87
+1204,6,558801.0,Maharashtra,Mumbai Suburban,4,High School,Employed,Farmer,Yes,Tap,1.68
+1205,10,373049.0,Maharashtra,Thane,4,PhD,Student,Not Applicable,Yes,Tap,2.48
+1206,4,544816.0,Maharashtra,Thane,3,High School,Employed,Farmer,Yes,Tap,0.62
+1207,3,764359.0,Maharashtra,Kolhapur,2,Masters,Employed,Business Owner,Yes,Hand Pump,1.37
+1208,3,550472.0,Maharashtra,Kolhapur,1,Bachelors,Employed,Business Owner,Yes,Community Tap,1.52
+1209,3,795187.0,Maharashtra,Kolhapur,0,High School,Employed,Government Job,Yes,Tap,0.84
+1210,4,98000000.0,Maharashtra,Nagpur,1,High School,Homemaker,Not Applicable,Yes,Tanker,1.27
+1211,1,213116.0,Maharashtra,Nagpur,0,PhD,Employed,Laborer,Yes,Community Tap,2.11
+1212,8,,Maharashtra,Mumbai Suburban,4,Bachelors,Employed,Government Job,Yes,Tap,2.84
+1213,2,507389.0,Maharashtra,Kolhapur,0,Bachelors,Unemployed,Not Applicable,Yes,Community Tap,
+1214,7,245067.0,Maharashtra,Mumbai City,1,Bachelors,Unemployed,Not Applicable,Yes,Tap,1.0
+1215,7,45536.0,Maharashtra,Gadchiroli,1,Uneducated,Student,Not Applicable,No,Tap,2.52
+1216,4,441175.0,Maharashtra,Nandurbar,0,Middle School,Employed,Farmer,Yes,Community Tap,0.63
+1217,6,,Maharashtra,Raigad,5,Middle School,Employed,Business Owner,Yes,Hand Pump,2.95
+1218,6,363037.0,Maharashtra,Beed,1,High School,Employed,Farmer,Yes,Well,2.17
+1219,7,183062.0,Maharashtra,Aurangabad,1,Bachelors,Retired,Not Applicable,Yes,Community Tap,1.9
+1220,4,1638521.0,Maharashtra,Pune,2,Bachelors,Homemaker,Not Applicable,Yes,Tap,2.13
+1221,2,83082.0,Maharashtra,Kolhapur,0,Masters,Student,Not Applicable,Yes,Tap,2.82
+1222,4,338312.0,Maharashtra,Mumbai Suburban,0,PhD,Employed,Farmer,Yes,Tap,0.95
+1223,6,960847.0,Maharashtra,Mumbai Suburban,4,High School,Employed,Business Owner,Yes,Tap,1.15
+1224,5,955274.0,Maharashtra,Pune,0,Bachelors,Employed,Government Job,Yes,Tap,0.75
+1225,6,486538.0,Maharashtra,Nagpur,1,High School,Employed,Farmer,Yes,Tap,1.34
+1226,7,305878.0,Maharashtra,Nashik,4,Masters,Unemployed,Not Applicable,Yes,Well,2.06
+1227,6,508110.0,Maharashtra,Mumbai Suburban,3,Masters,Employed,Farmer,Yes,Tap,0.7
+1228,3,122616.0,Maharashtra,Nagpur,2,Masters,Student,Not Applicable,Yes,Community Tap,2.5
+1229,4,200466.0,Maharashtra,Nanded,0,High School,Student,Not Applicable,Yes,Hand Pump,2.51
+1230,6,699592.0,Maharashtra,Mumbai Suburban,0,Bachelors,Employed,Farmer,Yes,Hand Pump,0.82
+1231,3,337134.0,Maharashtra,Nagpur,2,Middle School,Student,Not Applicable,Partial,Hand Pump,2.61
+1232,4,,Maharashtra,Thane,1,Middle School,Student,Not Applicable,Yes,Hand Pump,0.76
+1233,2,922733.0,Maharashtra,Mumbai City,1,High School,Student,Not Applicable,Yes,Tap,1.68
+1234,7,563368.0,Maharashtra,Mumbai Suburban,0,Masters,Student,Not Applicable,Yes,Well,3.0
+1235,6,729266.0,Maharashtra,Mumbai Suburban,4,Masters,Employed,Government Job,Yes,Tap,1.13
+1236,Six,662966.0,Maharashtra,Thane,5,Bachelors,Employed,Government Job,Yes,Tap,2.13
+1237,3,1581466.0,Maharashtra,Nashik,0,High School,Employed,Business Owner,No,Tap,1.47
+1238,11,631168.0,Maharashtra,Thane,5,Masters,Employed,Farmer,Yes,Tap,2.31
+1239,5,50000000.0,Maharashtra,Amravati,2,Bachelors,Employed,Laborer,Yes,Tap,1.86
+1240,3,,Maharashtra,Mumbai Suburban,0,Masters,Retired,Not Applicable,Yes,Hand Pump,0.88
+1241,5,275683.0,Maharashtra,Thane,0,Bachelors,Employed,Business Owner,Yes,Tap,2.7
+1242,1,1282129.0,Maharashtra,Thane,0,Bachelors,Employed,Government Job,Yes,Tanker,1.92
+1243,9,50973.0,Maharashtra,Parbhani,7,Middle School,Employed,Farmer,Yes,Well,2.24
+1244,2,334953.0,Maharashtra,Mumbai City,0,Masters,Employed,Farmer,Yes,Tap,1.26
+1245,3,1212746.0,Maharashtra,Mumbai Suburban,1,High School,Employed,Government Job,Yes,Tap,1.59
+1246,6,503748.0,Maharashtra,Dhule,3,Middle School,Employed,Farmer,Yes,Tap,2.32
+1247,4,433910.0,Maharashtra,Thane,1,Bachelors,Employed,Farmer,Yes,Tanker,1.62
+1248,6,264099.0,Maharashtra,Nagpur,0,Middle School,Employed,Farmer,Partial,Community Tap,1.36
+1249,8,500149.0,Maharashtra,Pune,6,Middle School,Employed,Farmer,Yes,Tap,0.79
+1250,4,2325583.0,Maharashtra,Pune,1,High School,Employed,Business Owner,Yes,Tap,0.95
